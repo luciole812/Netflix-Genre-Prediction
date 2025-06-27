@@ -27,7 +27,31 @@ Three supervised classification models were tested:
 Make sure you have Python 3.8+ and the following libraries installed: pip install pandas numpy scikit-learn matplotlib seaborn xgboost joblib
 
 ## How to Run
-1. Preprocessing (1_preprocessing.ipynb)
+1. Set up the environment
+Create and activate a virtual environment:
+virtualenv venv
+source venv/bin/activate
+Install dependencies:
+pip install -r requirements.txt
+2. Launch Jupyter Notebook (for interactive development)
+jupyter notebook \
+    --notebook-dir="." \
+    --ip=0.0.0.0 \
+    --port=3225
+3. Debug a Python script (e.g., test.py)
+Run the script with debug mode enabled:
+python -m debugpy --listen 4444 test.py
+4. Run the FastAPI App (development mode)
+fastapi dev main.py
+
+Enable Push to GitHub
+Make sure your Git configuration is set up properly:
+nano ~/.gitconfig
+# or open with VS Code:
+code ~/.gitconfig
+Add or verify your GitHub username, email, and any SSH settings needed.
+
+5. Preprocessing (1_preprocessing.ipynb)
 This step:
 - Cleans text (lowercase, removes digits/punctuation/stopwords),
 - Extracts the main genre from the genre list,
@@ -37,7 +61,7 @@ This step:
 - Splits the data (80% train / 20% test),
 - Saves matrices and encoders (TfidfVectorizer, LabelEncoder).
 - Place the files netflix_titles.csv and stopwords_en.txt in the data/ folder.
-2. Classification Model (2_classification_model.ipynb)
+6. Classification Model (2_classification_model.ipynb)
 - Loads X_train and y_train,
 - Trains the three models,
 - Saves them in the models/ folder.
