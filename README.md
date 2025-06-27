@@ -28,19 +28,19 @@ Make sure you have Python 3.8+ and the following libraries installed: pip instal
 
 ## How to Run
 1. Set up the environment
-Create and activate a virtual environment:
-virtualenv venv
-source venv/bin/activate
-Install dependencies:
-pip install -r requirements.txt
+- Create and activate a virtual environment:
+  virtualenv venv
+  source venv/bin/activate
+- Install dependencies:
+  pip install -r requirements.txt
 2. Launch Jupyter Notebook (for interactive development)
 jupyter notebook \
     --notebook-dir="." \
     --ip=0.0.0.0 \
     --port=3225
 3. Debug a Python script (e.g., test.py)
-Run the script with debug mode enabled:
-python -m debugpy --listen 4444 test.py
+- Run the script with debug mode enabled:
+  python -m debugpy --listen 4444 test.py
 4. Run the FastAPI App (development mode)
 fastapi dev main.py
 
