@@ -47,7 +47,7 @@ fastapi dev main.py
 Enable Push to GitHub
 Make sure your Git configuration is set up properly:
 nano ~/.gitconfig
-# or open with VS Code:
+- or open with VS Code:
 code ~/.gitconfig
 Add or verify your GitHub username, email, and any SSH settings needed.
 
